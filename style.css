@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    /* Primary Colors */
+    --clr-cyan: hsl(179, 62%, 43%);
+    --clr-light-cyan: hsl(179, 50%, 55%);
+    --clr-bright-yellow: hsl(71, 73%, 54%);
+
+    /* Neutral Colors */
+    --clr-light-gray: hsl(204, 43%, 93%);
+    --clr-grayish-blue: hsl(218, 22%, 67%);
+
+    /* Font-size */
+    --fs-body: 1rem;
+}
+
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--clr-light-gray);
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    font-size: var(--fs-body);
+}
+
+.main-card {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 540px;
+    width: 700px; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 3px 8px 4px rgba(128, 128, 128, 0.4);
+}
+
+.join-section {
+    padding: 30px 45px;
+}
+
+.join-title {
+    color: var(--clr-cyan);
+}
+
+.join-subtitle {
+    color: var(--clr-bright-yellow);
+    font-weight: 700;
+}
+
+.join-paragraph {
+    color: var(--clr-grayish-blue);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.card-details {
+    display: flex;
+    background-color: var(--clr-cyan);
+    color: white;
+}
+
+.column {
+    flex: 1;
+    padding: 20px 45px 45px 45px;
+}
+
+.subscription-price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.subscription-price-amount{
+    font-size: 2.2rem;
+    font-weight: 700;
+} 
+
+.subscription-price-text {
+    opacity: 0.6;
+}
+
+.subscription-paragraph {
+    opacity: 0.8;
+    font-size: 1.05rem;
+}
+
+.btn {
+    display: inline-flex;
+    cursor: pointer;
+    background-color: var(--clr-bright-yellow);
+    color: var(--clr-light-gray);
+    border: 0;
+    border-radius: 6px;
+    padding: 16px 28px;
+    font-size: var(--fs-body);
+    font-weight: 700;
+    margin-top: 18px;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 1px 3px 8px 4px rgba(128, 128, 128, 0.4);
+}
+
+.why-section {
+    background-color: var(--clr-light-cyan);
+}
+
+.why-title {
+    font-weight: 700;
+}
+
+.why-list{
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.4rem;
+    opacity: 0.6;
+}
+
+
+/***********
+   FOR MOBILE -- RESPONSIVE 
+                  ***********/
+@media (max-width: 375px) {
+    .main-card {
+        margin: auto;
+        height: auto; 
+        width: auto;
+    }
+    .join-title {
+        font-size: 1.35rem;
+    }
+    .join-subtitle {
+        font-size: 1rem;
+    }
+    .join-paragraph {
+        font-size: 0.85rem;
+    }
+    .card-details {
+        display: block;
+        width: 100%;
+    }
+    .card-details .column {
+        padding: 20px 45px 15px 45px;
+    }
+    .btn {
+        margin-bottom: 15px;
+    }
+}
